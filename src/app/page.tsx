@@ -163,7 +163,7 @@ const DashboardPage = () => {
                   <XAxis dataKey="name" stroke="#A0AEC0" name="时间" tick={false} />
                   <YAxis stroke="#A0AEC0" tickFormatter={formatPercentage} allowDataOverflow={true} domain={['auto', 'auto']}/>
                   <Tooltip 
-                    formatter={(value: number, name: string, props: any) => [formatPercentage(value), `涨跌幅 (${props.payload.name})`]}
+                    formatter={(value: number, name: string, props: FormatterProps) => [formatPercentage(value), `涨跌幅 (${props.payload.name})`]}
                     contentStyle={{ backgroundColor: '#2D3748', border: '1px solid #4A5568', borderRadius: '0.5rem' }} 
                     labelStyle={{ color: '#E2E8F0' }}
                   />
